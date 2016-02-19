@@ -663,6 +663,7 @@ for column in range(12,18): #disorder 1-6
     meanMinLatencyInd.append(np.nanmean(group))   
 
 
+#######################################################################
 # Plot bar plots for accuracy, latency and response counts
 disorderLabel = ['TBI', 'Stroke', 'Aphasia', 'Dyslexia', 'Dementia', 'Other'];
 ind = np.arange(6) 
@@ -743,6 +744,7 @@ ax.set_xticklabels(disorderLabel, fontsize=14)
 ax.legend((rects1[0], rects2[0], rects3[0]), ('Start', 'Min', 'End'), fontsize=14, loc='best')
 
 
+#######################################################################
 #%% Data Visualization with Seaborn 
 
 #Convert patientMatrix into a data frame 
@@ -796,6 +798,7 @@ with sns.axes_style('white'), sns.plotting_context("notebook",font_scale=1.2):
 
 
 
+#######################################################################
 #%% Build linear regression models to predict End Accuracy
 
 #NOTE: set random_state = None if you want the random samples to change each time.
@@ -911,6 +914,7 @@ with sns.plotting_context("notebook",font_scale=1.2):
     
 
 
+#######################################################################
 #%% Using non-linear Random Forest Regression to Predict End Accuracy
 
 from sklearn.ensemble import RandomForestRegressor
@@ -960,6 +964,7 @@ with sns.plotting_context("notebook",font_scale=1.2):
     
 
 
+#######################################################################
 #%% Exploratory Analysis
 
 """
@@ -1045,6 +1050,8 @@ py.ylabel('2nd TSNE component', fontsize=14)
 #also doesn't work v well
 
 
+
+#######################################################################
 """
 Linear Discriminant Analysis (LDA) tries to find attributes that 
 account for the most variance between classes. 
