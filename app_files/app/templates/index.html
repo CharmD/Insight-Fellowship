@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Insight Project"/>
+    <meta name="author" content="Charmaine Demanuele"/>
+    <link rel="icon" href="../static/fonts/favicon.ico"/>
+
+    <title>Constant Therapy Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" href="../static/css/bootstrap.min.css" rel="stylesheet"/>
+    <link type="text/css" href="../static/css/bootstrap-slider.css" rel="stylesheet"/>
+	
+    <!-- Custom styles for this template -->
+    <style type='text/css'>
+		#ex1Slider .slider-selection {
+   			background: #BABABA;
+  		}
+
+  		.header {
+			background-color: #F5F5F5;
+			color: #36A0FF;
+			height: 70px;
+			font-size: 27px;
+			padding: 10px;
+		}
+
+		body {
+		  padding-top: 50px;
+		}
+
+		.starter-template {
+		  padding: 40px 15px;
+		  text-align: center;
+		}
+    </style>        
+        
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../static/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../static/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Constant Therapy Consulting</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a  href="#appSection">App</a></li>
+            <li><a href="https://docs.google.com/presentation/d/1q_zVx0raq00TyQtyHGF_tXOaXRsk6EVjxzU2bQhXxZ0/edit?usp=sharing" target="_blank">Slides</a></li>
+            <li><a class="page-scroll" href="https://www.linkedin.com/in/charmaine-demanuele-98051941" target="_blank">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div><!-- /.container -->
+	<br/><br/> 
+    <div class="container">
+		<div class="jumbotron">
+		  <h2>Therapy Prospector</h2>
+		  <p>This app predicts the effects of therapy for new constant therapy patients, offering them more effective, targeted and personalized brain rehabilitation.<br/>It predicts the patient's end performance on a set task and difficulty level based on their demographic information and preliminary baseline activity.<br/>It compares their predicted end performance to the population of constant therapy patients.</p>
+		  <p><a id="example" class="btn btn-primary btn-lg" href="#" role="button">See it work</a></p>
+		</div>
+	</div><!-- /.container -->
+	
+	<section class="bg-primary" id="appSection">
+		<br/>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div id="app_form" class="well well-sm">
+						
+                        <form name="app" class="form-horizontal" action="">
+							<fieldset>
+								<legend class="text-center header">Input</legend>
+								<div class="input-group">          
+									<span class="input-group-addon" id="basic-addon1">Task:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<select class="form-control" id="task" name='task'>
+										<option value="1" class="">Auditory Command - Level 1</option>
+										<option value="2" class="">Auditory Command - Level 2</option>
+										<option value="3" class="">Auditory Command - Level 3</option>
+										<option value="4" class="">Auditory Command - Level 4</option>
+										<option value="5" class="">Auditory Command - Level 5</option>						  
+									</select>					
+								</div>
+								<br/>
+								<div class="input-group">				
+									<span class="input-group-addon" id="basic-addon1">Baseline Accuracy:</span>
+									<span class="form-control" id="basic-addon1">
+										<input id="baselineAccuracy" data-slider-id="ex1Slider" style = "width: 100%;" type="text" data-slider-min="0.0" data-slider-max="1.0" data-slider-step="0.01" data-slider-value="0.5" name='baselineAccuracy'/>
+									</span>
+								</div>                        
+								<br/>							
+								<div class="input-group">          
+									<span class="input-group-addon" id="basic-addon1">Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<select class="form-control" id="gender" name='gender'>
+										<option value="10" class="">Male</option>
+										<option value="01" class="">Female</option>															  
+									</select>				  
+								</div>
+								<br/>
+								<div class="input-group">				
+									<span class="input-group-addon" id="basic-addon1">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span class="form-control" id="basic-addon1">
+										<input id="age" data-slider-id="ex1Slider" style = "width: 100%;" type="text" data-slider-min="10" data-slider-max="100" data-slider-step="1" data-slider-value="55" name='age'/>
+									</span>
+								</div>                        
+								<br/>							
+								<div class="input-group">          
+									<span class="input-group-addon" id="basic-addon1">Disorder:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<select class="form-control" id="disorder" name='disorder'>
+										<option value="100000" class="">TBI</option>
+										<option value="010000" class="">Stroke</option>
+										<option value="001000" class="">Aphasia</option>						  
+										<option value="000100" class="">Dyslexia</option>
+										<option value="000010" class="">Dementia</option>
+										<option value="000001" class="">Other</option>
+									</select>				  
+								</div>
+								<br/>
+								<div class="input-group">          
+									<span class="input-group-addon" id="basic-addon1">Deficit:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<select class="form-control" id="defecit" name='defecit'>
+										<option value="1000" class="">Reading</option>
+										<option value="0100" class="">Writing</option>
+										<option value="0010" class="">Attention</option>
+										<option value="0001" class="">Problem Solving</option>						  
+									</select>				  
+								</div>
+								<br/>
+								<div class="input-group">          
+									<span class="input-group-addon" id="basic-addon1">Condition Since:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<select class="form-control" id="conditionSince" name='conditionSince'>
+										<option value="100000" class="">6 months</option>
+										<option value="010000" class="">1 year</option>
+										<option value="001000" class="">2 years</option>
+										<option value="000100" class="">5 years</option>
+										<option value="000010" class="">10 years</option>
+										<option value="000001" class="">&gt;10 years</option>
+									</select>				  
+								</div>
+								<br/>
+								<div class="col-md-12 text-center">
+									<a id="submit" class="btn btn-primary btn-lg" href="#" role="button">Submit</a>                                    
+								</div>								
+							</fieldset>
+						</form>
+					</div>				
+				</div>   					
+				<div class="col-md-6">
+					<div>
+						<!--<div id="result" class="panel panel-default" style="display: none;">-->
+						<div id="result" class="panel panel-default">
+							<div class="text-center header">Results</div>
+							<div class="panel-body text-center">
+								<div id="predictionGraph" style="min-height: 345px;"><img src="/figure" style="height: 100%; width: 100%; object-fit: contain"/></div>
+								<hr />
+								<div id="predictionResult">
+									<p style = "color: #000; font-size: 106%; display:inline;"><b>Predicted end accuracy for this patient is {{endAccuracy}}. <br/>
+									Patient is likely to perform better than {{popPercent}}% of the population on this task.</b></p>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div> <!-- /.container -->
+	</section>
+	
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap-slider.js"></script>	
+    <script type="text/javascript">
+
+    	var MESSAGE_KEY_LINE1 = "messageLine1"
+		var MESSAGE_KEY_LINE2 = "messageLine2"
+		var GRAPH_KEY = "graph"
+
+		var jsonFunction = function() {
+
+	        /* use AJAX to submit the form asynchronously */
+	        $.getJSON('/result', {
+
+		        task : $("select#task").val(),
+	            baselineAccuracy : $("input#baselineAccuracy").val(),
+	            gender : $("select#gender").val(),
+	            age : $("input#age").val(),
+	            disorder : $("select#disorder").val(),
+	            defecit : $("select#defecit").val(),
+	            conditionSince : $("select#conditionSince").val(),
+	        }, function(data) {
+	          
+	          $("#predictionResult").html('<p id="predictionResultLine1" style = "color: #000;  font-size: 106%; display:inline;"><b>' + data.result[MESSAGE_KEY_LINE1] + '</b></p><br/><p id="predictionResultLine2" style = "color: #000;  font-size: 106%; display:inline;"><b>' + data.result[MESSAGE_KEY_LINE2] + '</b></p>');
+	          $('#predictionGraph').html('<img src="data:image/png;base64,'+ data.result[GRAPH_KEY] +'" style="height: 100%; width: 100%; object-fit: contain"/>');
+	        });
+	        return false;
+    	};
+
+    	function randomizeFunction(endValue, startValue, discrete) {
+
+    		/* set the default values for the parameters passed in */
+    		if (startValue === undefined) {
+		        startValue = 0;
+		    }
+
+		    if (discrete === undefined) {
+		        discrete = true;
+		    }
+
+	        /* use 'random' function to generate a number between 'startValue' and 'endValue' */
+	        randomValue = (Math.random() * (endValue - startValue + 1)) + startValue;
+	        return discrete ? Math.floor(randomValue) : randomValue.toFixed(2);
+    	};
+        
+    	$(document).ready(function() {
+        
+            /* Handler for 'Baseline Accuracy' slider styling */
+        	$("#baselineAccuracy").slider({
+	          	tooltip: 'always',
+                precision: 2,
+				value: 0.5
+	        });
+			
+            /* Handler for 'Age' slider styling */
+			$("#age").slider({
+	          	tooltip: 'always',
+                value: 55
+	        });
+			
+            /* Handler for 'Example' button click */
+			$("#example").click(function() {
+                
+                /* randomize form input, set form fields, submit the form using ajax */
+                var task = randomizeFunction(4);
+                var baselineAccuracy = randomizeFunction(0, 0, false);
+                var gender = randomizeFunction(1);
+                var age = randomizeFunction(100, 10);
+                var disorder = randomizeFunction(5);
+                var defecit = randomizeFunction(3);  
+                var conditionSince = randomizeFunction(5);
+
+                $("select#task option").eq(task).prop('selected', true);
+                $("input#baselineAccuracy").slider('setValue', parseFloat(baselineAccuracy));
+	            $("select#gender option").eq(gender).prop('selected', true);
+	            $("input#age").slider('setValue', parseInt(age));
+	            $("select#disorder option").eq(disorder).prop('selected', true);
+	            $("select#defecit option").eq(defecit).prop('selected', true);
+	            $("select#conditionSince option").eq(conditionSince).prop('selected', true);           
+
+	            jsonFunction();
+		        return false;
+              
+			});
+            
+            /* Handler for 'Submit' button click */
+            $("#submit").click(jsonFunction);            
+        });		       
+    </script>           
+  </body>
+</html>
